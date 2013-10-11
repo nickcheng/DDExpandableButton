@@ -36,6 +36,11 @@
 	CGFloat 	maxWidth;
     NSArray 	*labels;
 	DDView		*leftTitleView;
+  
+  CGFloat labelVerticalOffset;
+  UIColor *innerBorderColor;
+  CGFloat innerBorderPadding;
+  NSMutableArray *innerBorderViews;
 }
 
 // Current button status (if expanded or shrunk).
@@ -79,6 +84,10 @@
 
 // Access UIView used to draw labels.
 @property (nonatomic,readonly)	NSArray 	*labels;
+
+@property (nonatomic, assign) CGFloat labelVerticalOffset;
+@property (nonatomic, retain) UIColor *innerBorderColor;
+@property (nonatomic, assign) CGFloat innerBorderPadding;
 
 - (id)initWithPoint:(CGPoint)point leftTitle:(id)leftTitle buttons:(NSArray *)buttons;
 
